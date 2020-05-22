@@ -1,0 +1,9 @@
+<% if @user.errors.messages.any? %>
+    <ul>
+        <% @user.errors.ful_messages.each do |error| %>
+            <li><%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
+<p><%= @user.username %><p>
+<%=link_to "edit", edit_user_path(@user)%>
